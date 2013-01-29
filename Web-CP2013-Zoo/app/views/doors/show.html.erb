@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Open:</b>
+  <%= @door.open %>
+</p>
+
+<p>
+  <b>Entrance:</b>
+  <%= @door.entrance_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_cage_entrance_door_path(@cage, @entrance, @door) %> |
+<%= link_to 'Back', cage_entrance_doors_path(@cage, @entrance) %>

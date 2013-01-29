@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebCp2013Zoo</title>
+  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=AIzaSyAwwCQO7vp-dRwCkpR565p3VkGgCyefglw&sensor=false" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body onload="<%= yield(:on_load_body) || '' %>">
+
+<%= yield %>
+
+</body>
+</html>

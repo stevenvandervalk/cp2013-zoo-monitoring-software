@@ -1,0 +1,26 @@
+<h1>Listing doors</h1>
+
+<table>
+  <tr>
+    <th>Open</th>
+    <th>Entrance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doors.each do |door| %>
+  <%
+  entrance = door.entrance
+  cage = entrance.cage
+  %>
+
+  <tr>
+    <td><%= door.open %></td>
+    <td><%= door.entrance_id %></td>
+    <td><%= link_to 'Show', cage_entrance_door_path(cage, entrance, door) %></td>
+    <td><%= link_to 'Edit', edit_cage_entrance_door_path(cage, entrance, door) %></td>
+    <td><%= link_to 'Destroy', cage_entrance_door_path(cage, entrance, door), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>

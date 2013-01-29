@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  size: 5.5
+  category: ""
+  name: MyString
+  latitude: 0.1
+  longitude: 85
+  lights_on: false
+  date_last_fed: <%= DateTime.new(1999) %>
+  date_last_cleaned: <%= DateTime.new(200) %>
+
+two:
+  size: 10.5
+  category: ""
+  latitude: 0.1
+  longitude: 85
+  name: MyString
+  lights_on: false
+  date_last_fed: <%= DateTime.new(1999) %>
+  date_last_cleaned: <%= DateTime.new(2000) %>

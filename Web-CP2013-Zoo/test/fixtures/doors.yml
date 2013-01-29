@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+closed_door:
+  open: false
+  entrance: :one
+
+open_door:
+  open: true
+  entrance: :two

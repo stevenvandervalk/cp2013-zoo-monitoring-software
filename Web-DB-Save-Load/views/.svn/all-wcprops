@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/235/Web-DB-Save-Load/views
+END
+layout.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/235/Web-DB-Save-Load/views/layout.erb
+END
+save.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/234/Web-DB-Save-Load/views/save.erb
+END
+load.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/234/Web-DB-Save-Load/views/load.erb
+END
+index.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/234/Web-DB-Save-Load/views/index.erb
+END

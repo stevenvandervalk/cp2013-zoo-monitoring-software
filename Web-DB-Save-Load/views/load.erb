@@ -1,0 +1,11 @@
+<form action="/load" method='post'>
+  <label>
+    Load File Name
+    <select name='load_file_name'>
+      <% @files_from_which_to_load.each do |f| %>
+        <option value="<%= f %>"><%= f %></option>
+      <% end %>
+    </select>
+  </label>
+  <input type='submit' value="Load"></input>
+</form>

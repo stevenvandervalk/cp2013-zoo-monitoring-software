@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebCp2013Zoo</title>
+</head>
+
+<body>
+
+<p><%= session[:notification] %></p>
+<%
+  session[:notification] = nil
+%>
+<%= yield %>
+<p><a href="http://<%= request.host %>:3000/zoo_setup_ui">Back to Web Zoo Setup UI</a></p>
+
+</body>
+</html>

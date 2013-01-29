@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @cage.name %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @cage.size %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @cage.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_cage_path(@cage) %> |
+<%= link_to 'Back', cages_path(@cage) %>

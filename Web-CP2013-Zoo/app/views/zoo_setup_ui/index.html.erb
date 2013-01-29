@@ -1,0 +1,61 @@
+<%= content_for :on_load_body, "window.AdminApplication.run();" %>
+
+<div id="admin_index_container">
+
+  <h1>Zoo Setup UI</h1>
+
+  <div class='links'>
+    <%= link_to 'Zoo User UI Interface', home_index_path() %>
+  </div>
+
+
+  <div id="cages" class="ui-helper-clearfix">
+    <h2>Listing Cages</h2>
+    <div>
+        <input id="cage_count" type="text" /><button id="change_cage_count">Change Cage Count</button><br>
+        <button id="clear_cages">Clear Cages</button><br>
+    </div>
+    <table id="cages_list" class="cages_list">
+      <thead><tr><th>name</th><th>type</th><th>size (m&#178;)</th><th>longitude (&#176;decimal) </th><th>latitude (&#176;decimal)</th><th>last fed</th><th>last cleaned</th><th>entrances</th><th></th></tr></thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="add_cage">Add A Cage</button><br>
+  </div>
+
+
+  <div id="employees" class="ui-helper-clearfix">
+    <h2>Listing Employees</h2>
+    <div>
+        <input id="employee_count" type="text" /><button id="change_employee_count">Change Employee Count</button><br>
+        <button id="clear_employees">Clear Employees</button><br>
+    </div>
+    <table id="employees_list" class="employees_list">
+      <thead><tr><th>employee_id</th><th>name</th><th></th></tr></thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="add_employee">Add An Employee</button><br>
+  </div>
+
+  <div id="animals" class="ui-helper-clearfix">
+    <h2>Listing Animals</h2>
+    <div>
+        <input id="animal_count" type="text" /><button id="change_animal_count">Change Animal Count</button><br>
+        <button id="clear_animals">Clear Animals</button><br>
+    </div>
+    <table id="animals_list" class="animals_list">
+      <thead><tr><th>animal_id</th><th>name</th><th></th></tr></thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="add_animal">Add An Animal</button><br>
+  </div>
+
+  <h2>Save/Load</h2>
+  <ul>
+    <li><a href="http://<%= request.host %>:4567/save">Save</a></li>
+    <li><a href="http://<%= request.host %>:4567/load">Load</a></li>
+  </ul>
+
+</div>

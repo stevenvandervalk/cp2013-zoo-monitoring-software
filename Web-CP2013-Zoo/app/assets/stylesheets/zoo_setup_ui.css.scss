@@ -1,0 +1,42 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.error {
+  background-color: #f00;
+  background-color: rgba(255,100,100,0.7);
+}
+
+#admin_index_container {
+  margin: 1em;
+}
+
+#admin_index_container #cages {
+  display: inline-block;
+  border-radius: 0.8em;
+  background-color: rgba(155,200,255,0.7);
+  padding: 2em;
+  margin: 1em;
+}
+
+#admin_index_container #employees {
+  display: inline-block;
+  border-radius: 0.8em;
+  background-color: rgba(155,255,200,0.7);
+  padding: 2em;
+  margin: 1em;
+}
+
+#admin_index_container #animals {
+  display: inline-block;
+  border-radius: 0.8em;
+  background-color: rgba(255,200,155,0.7);
+  padding: 2em;
+  margin: 1em;
+}
+
+#admin_index_container h2{
+  border-radius: 0.8em;
+  background-color: #fff;
+  padding: 1em;
+}

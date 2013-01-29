@@ -1,0 +1,21 @@
+<%= form_for([@cage, @entrance]) do |f| %>
+  <% if @entrance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entrance.errors.count, "error") %> prohibited this entrance from being saved:</h2>
+
+      <ul>
+      <% @entrance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cage_id %><br />
+    <%= f.number_field :cage_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,334 @@
+// Place all the styles related to the Cages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.okay {
+  background-color: #afa !important;
+}
+
+.user_cage.error {
+  background-color: #f00 !important;
+}
+
+.popup .small_icons {
+  float: right;
+}
+
+.small_icons img {
+  height: 16px;
+  width: 16px;
+  border: 3px white solid;
+  border-radius: 1px;
+  background-color: #fff;
+}
+
+body {
+  background-color: #fff;
+}
+
+
+.user_cage img {
+  margin: 1em;
+  box-shadow: 10px 10px 5px #888;
+  border-radius: 0.5em;
+}
+
+.icons img {
+  margin: 0.5em;
+  box-shadow: 0px 0px 9px #888;
+  border-radius: 0.25em;
+}
+
+.icons .entrance {
+  background-color: #ddd;
+  border: solid 1px #aaa;
+  border-radius: 0.5em;
+  margin-left: 0.5em;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+.user_cage .images {
+  margin: 0.8em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cages_list {
+  width: 30%;
+  height: 100%;
+  margin: 1em;
+  padding: 0.5em;
+  min-height: 10em;
+  opacity: 1.0;
+  background-color: rgba(230,255,255,0.5);
+}
+
+.cages_list > div {
+  padding: 1em;
+  opacity: 1.0;
+  border: 6px #aaf solid;
+  border-color: rgba(200,255,255,1.0);
+  border-radius: 0.5em;
+  background-color: rgba(230,255,255,0.9);
+  margin: 1em;
+}
+
+.cages_list > div.unfocused {
+  cursor: pointer;
+}
+
+.cages_list > div.unfocused:hover {
+  background-color: rgba(255,255,200,0.9);
+}
+
+.cages_list > div.backgrounded {
+  opacity: 0.5;
+}
+
+.cages_list > div.focused h2 {
+}
+
+.cages_list > div.focused .cage_content {
+  position: absolute;
+  top: 5em;
+  bottom: 0.5em;
+  right: 1.0em;
+  left: 1.0em;
+  overflow: auto;
+}
+
+.cages_list > div.focused {
+  position: fixed;
+  top: 15%;
+  left: 25%;
+
+  height: 70%;
+  width: 55%;
+  background-color: white;
+  opacity: 1.0;
+  border-color: #ccc;
+
+  border-radius: 1em;
+
+  -moz-box-shadow: 15px 15px 25px #888;
+  -webkit-box-shadow: 15px 15px 25px #888;
+  box-shadow: 15px 15px 25px #888;
+
+  overflow: auto;
+}
+
+.cage_content p span {
+  display: block;
+}
+
+.user_entrance_view, .user_door_view {
+  padding-left: 1em;
+}
+
+.cage_content p span:before, .door_content p span:before {
+  background-color: #666;
+  color: #fff;
+  margin-right: 1em;
+  width: 10em;
+  display: inline-block;
+  padding: 0.2em;
+}
+
+.cage_content p span.animal_name:before {
+  content: "Exhibit:";
+}
+
+.cage_content p span.lights_on:before {
+  content: "Lights On:";
+}
+
+.cage_content p span.category:before {
+  content: "Type: "
+}
+
+.cage_content p span.size:before {
+  content: "Size: "
+}
+.cage_content p span.size:after {
+  content: " m\00B2"
+}
+
+.cage_content p span.longitude:before {
+  content: "Longitude: "
+}
+.cage_content p span.longitude:after, .cage_content p span.latitude:after {
+  content: " \00B0"
+}
+
+.cage_content p span.latitude:before {
+  content: "Latitude: "
+}
+
+.cage_content p span.human_present:before {
+  content: "Someone Inside?: "
+}
+
+.cage_content p span.human_present.human_is_present:after {
+  content: "Warning - A Human Is Inside";
+  background-color: rgba(255,120,120,0.5);
+  margin-left: 1em;
+  padding: 0.2em;
+}
+
+.cage_content p span.date_last_fed:before {
+  content: "Last Fed: "
+}
+
+.cage_content p span.date_last_cleaned:before {
+  content: "Last Cleaned: "
+}
+
+.door_content p span.door_open:before {
+  content: "Door Open?: ";
+}
+
+.door_content p span.door_locked:before {
+  content: "Door Locked?: ";
+}
+
+.actions {
+  float: right;
+}
+
+
+.cage_content.human_is_present .human_present_place_holder:before {
+  content: "human inside";
+  background-color: rgba(255,120,120,0.5);
+  padding: 0.2em;
+  margin: 0.2em;
+  float: right;
+  border-radius: 0.5em;
+  font-weight: bolder;
+}
+
+.cage_content.cage_contains_no_exhibit .cage_contains_no_exhibit_place_holder:before {
+  content: "empty";
+  background-color: rgba(255,180,120,0.5);
+  padding: 0.2em;
+  margin: 0.2em;
+  float: right;
+  border-radius: 0.5em;
+  font-weight: bolder;
+}
+
+.cage_content.door_is_open .door_open_place_holder:before {
+  content: "door open";
+  background-color: rgba(255,120,120,0.5);
+  padding: 0.2em;
+  margin: 0.2em;
+  float: right;
+  border-radius: 0.5em;
+  font-weight: bolder;
+}
+
+/*
+.cage_content.cage_contains_exhibit:before{
+  float: right;
+}
+*/
+
+.cage_content p span.animal_name.cage_contains_no_exhibit:after {
+  content: "Cage is Empty";
+  background-color: rgba(255,180,120,0.5);
+  padding: 0.2em;
+}
+
+.focus {
+  float: right;
+}
+
+.user_cage {
+  background-color: #fff;
+}
+
+.images * {
+  margin: 0.3em;
+}
+
+.infoBox > img {
+  background-color: white;
+}
+
+.user_cage.popup {
+  padding: 0.5em;
+  display: block;
+  min-width: 130px;
+  margin: 0.5em;
+  overflow: auto;
+  cursor: pointer;
+  border: 2px solid white;
+  opacity: 0.9;
+}
+
+.user_cage.popup:hover {
+  opacity: 1.0;
+}
+
+.user_cage.popup h1 {
+  font-size: 12pt;
+}
+
+.cage_alerts {
+  float: right;
+  clear: both;
+  padding: 1em;
+  background-color: rgba(255,180,120,0.5);
+  position: relative;
+  border-radius: 0.5em;
+}
+
+.cage_alerts h2 {
+  float: left;
+  font-size: 12pt;
+  background-color: rgba(255,255,255,0.9);
+  padding: 0.2em;
+  position: relative;
+  bottom: 15px;
+  right: 10px;
+  margin-right: -1em;
+}
+
+.cage_content {
+  clear: both;
+}
+
+.cage_alerts p {
+  padding: 0.5em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 2px #888;
+  float: left;
+  margin-left: 0.8em;
+}
+
+.cage_alerts p.no_alerts_place_holder {
+  background-color: rgba(155,220,220,0.9);
+}
+
+.view_launchers {
+  float: right;
+}
+.view_launchers button {
+  padding: 0.3em;
+  width: 12em;
+  display: inline-block;
+}
+
+.view_launchers button span.ui-icon {
+  margin-left: 0.5em;
+  float: right;
+}
+
+.entrances_list {
+}
+
+.entrances_list div {
+  margin-top: 0.5em;
+}

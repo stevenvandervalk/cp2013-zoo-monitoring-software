@@ -1,0 +1,15 @@
+// Place all the styles related to the Doors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.doors_table, .doors_list {
+  background-color: rgba(255,225,180,0.7);
+  border: solid 2px #fca;
+}
+
+.door_content p span.door_open.door_is_open:after {
+  content: "Warning - A Door Is Open";
+  background-color: rgba(255,120,120,0.5);
+  margin-left: 1em;
+  padding: 0.2em;
+}
